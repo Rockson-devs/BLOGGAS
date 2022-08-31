@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
-    <title>BLOGGAS-index</title>
+    <title>BLOGGAS-admin</title>
 </head>
 <body class="bg-light">
     <header>
@@ -35,10 +35,17 @@
                         <a class="nav-link text-white" href="#"><i class="bi bi-pinterest"></i></a>
                     </li>
                     </ul>
-                    <form class="d-flex">
-                    <input class="form-control me-2 rounded-pill" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                    <div class="d-flex">
+                        <div class="row bg-dark rounded">
+                            <div class="contributor-image col-4 pt-1">
+                                <img src="thought-catalog-o0Qqw21-0NI-unsplash.jpg" class="img-thumbnail rounded-circle" alt="contributor-image" style="height:70px; width:70px;">
+                            </div>
+                            <div class="contributor-info col">
+                                <p class="fst-italic text-white"> ADMIN</p>
+                                <p class="fst-italic text-white"> 29th August, 2022</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 </div>
             </nav>
@@ -73,68 +80,62 @@
             </nav>
         </div>
     </header>
-    <main>
-        <div class="container ImageWithText mb-3">
-            <img src="thought-catalog-o0Qqw21-0NI-unsplash.jpg" class="img-fluid" alt="Stacked books" style="height:500px; width: 100%;">
-            <div id="textOnImage">
-                <h3>Blogs</h3>
-                <h2>My first Blog</h2>
-                <p>August 23, 2022</p>
-            </div>
-        </div>
-        <div class="container mb-3 bg-light">
-            <div class="row d-flex justify-content-between flex-wrap">
-                <div class="card me-2 mb-3" style="width: 18rem;">
-                    <img src="andrew-neel-cckf4TsHAuw-unsplash.jpg" class="card-img-top" alt="andrew">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card me-2 mb-3" style="width: 18rem;">
-                    <img src="glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" class="card-img-top" alt="glenn">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card me-2 mb-3 " style="width: 18rem;">
-                    <img src="retrosupply-jLwVAUtLOAQ-unsplash.jpg" class="card-img-top" alt="retro">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card me-5 " style="width: 18rem;">
-                    <img src="retrosupply-jLwVAUtLOAQ-unsplash.jpg" class="card-img-top" alt="retro">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card me-5 " style="width: 18rem;">
-                    <img src="andrew-neel-cckf4TsHAuw-unsplash.jpg" class="card-img-top" alt="andrew">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-                <div class="card me-2 " style="width: 18rem;">
-                    <img src="glenn-carstens-peters-npxXWgQ33ZQ-unsplash.jpg" class="card-img-top" alt="glenn">
-                    <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
+    <main class="mt-5">
+        <div class="container mt-5">
+            <div class="container bg-light">
+                <div class="contributor-blogs">
+                    <h3 class="contributor-title text-center mb-3">Admin Watch</h3>
+                    <div class="container mb-3 bg-light">
+                        <div class="admin-table">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Contributors</th>
+                                    <th scope="col">Number of Articles</th>
+                                    <th scope="col">Date of last Post</th>
+                                    <th scope="col">Details</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Rockson Boateng Omane</td>
+                                    <td>5</td>
+                                    <td>05/03/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Setina Tandoh</td>
+                                    <td>3</td>
+                                    <td>05/08/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Diana Bamfowaa Kwarteng</td>
+                                    <td>8</td>
+                                    <td>21/03/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>Omane Fremah Vera</td>
+                                    <td>6</td>
+                                    <td>01/08/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                     </div>
                 </div>
             </div>
         </div>
     </main>
+    </main>
+
     <footer>
         <div class="container-fluid bg-dark d-flex justify-content-center flex-column">
             <!-- <div class=""> -->
