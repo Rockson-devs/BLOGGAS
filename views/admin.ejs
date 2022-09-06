@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/head'); -%>
+<body class="bg-light">
+    <header>
+        <div class="container-fluid mb-3">
+            <nav class="navbar navbar-expand-lg navbar-light bg-dark navbarTop">
+                <div class="container">
+                <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> -->
+                    <!-- <span class="navbar-toggler-icon"></span>
+                </button> -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="bi bi-facebook"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white " href="#"><i class="bi bi-twitter"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="bi bi-instagram"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="bi bi-whatsapp"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#"><i class="bi bi-pinterest"></i></a>
+                    </li>
+                    </ul>
+                    <div class="d-flex">
+                        <div class="row bg-dark rounded">
+                            <div class="contributor-image col-4 pt-1">
+                                <img src="/images/thought-catalog-o0Qqw21-0NI-unsplash.jpg" class="img-thumbnail rounded-circle" alt="contributor-image" style="height:70px; width:70px;">
+                            </div>
+                            <div class="contributor-info col">
+                                <p class="fst-italic text-white"> ADMIN</p>
+                                <p class="fst-italic text-white"> 29th August, 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </nav>
+            <nav class="navbar navbar-light bg-light navbarDown">
+                <div class="container">
+                        <div class="me-auto">
+                            <a class="navbar-brand" href="#">BLOGGAS</a>
+                        </div>  
+                        <div class="ms-auto">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-row ">
+                                <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="#">HOME</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="#">LOGIN</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="#">REGISTER</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="#">CONTACT</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="#">WRITE A BLOG</a>
+                                </li>
+                                <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="#">LOGOUT</a>
+                                </li>
+                            </ul>
+                        </div>  
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="mt-5">
+        <div class="container mt-5">
+            <div class="container bg-light">
+                <div class="contributor-blogs">
+                    <h3 class="contributor-title text-center mb-3">Admin Watch</h3>
+                    <div class="container mb-3 bg-light">
+                        <div class="admin-table">
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Contributors</th>
+                                    <th scope="col">Number of Articles</th>
+                                    <th scope="col">Date of last Post</th>
+                                    <th scope="col">Details</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">1</th>
+                                    <td>Rockson Boateng Omane</td>
+                                    <td>5</td>
+                                    <td>05/03/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">2</th>
+                                    <td>Setina Tandoh</td>
+                                    <td>3</td>
+                                    <td>05/08/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">3</th>
+                                    <td>Diana Bamfowaa Kwarteng</td>
+                                    <td>8</td>
+                                    <td>21/03/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">4</th>
+                                    <td>Omane Fremah Vera</td>
+                                    <td>6</td>
+                                    <td>01/08/2022</td>
+                                    <td><a href="#">Details</a></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <%- include('layouts/footer'); -%>
+    <%- include('layouts/scripts'); -%>
+</body>
+</html>

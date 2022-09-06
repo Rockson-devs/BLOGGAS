@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/head'); -%>
+<body>
+    <div class="container bg-white" id="pageContainer">
+        <div class="container bg-light d-flex border-0 border-secondary rounded shadow-sm" id="loginContainer">
+            <div class=" container">
+                <div class="container mb-3 ">
+                        <nav class="navbar navbar-light bg-light navbarDown">
+                            <div class="container">
+                                <div class="container mt-3 d-flex justify-content-center">
+                                    <a class="navbar-brand font-monospace fs-1" href="#">BLOGGAS</a>
+                                </div>
+                            </div>
+                        </nav>
+                </div>
+                <div class="container mb-3">
+                    <p class="d-flex justify-content-center">Welcome to &nbsp <a class="text-dark" href="#">BLOGGAS</a></p>
+                    <p class="d-flex justify-content-center">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>
+                        Blanditiis deleniti saepe odit ratione, quod maxime cum sit.
+                    </p>
+                    <p class="d-flex justify-content-center">No account? &nbsp 
+                       <button class="btn-secondary rounded"><a class="text-white text-decoration-none" href="#">Register</a> </button>
+                        
+                        <br>
+                    </p>  
+                </div>
+                <div class="container mb-3">
+                    <form action="" method="post">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                            <label for="floatingInput">Email</label>
+                        </div>
+                        <div class="form-floating mb-3 ">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                            
+                        <button class="btn btn-secondary" type="submit">Log In </button>
+                    </form>
+                </div>
+            </div>
+            <div class="container mb-3 pt-3">
+                <img src="/images/thought-catalog-o0Qqw21-0NI-unsplash.jpg" class="img-fluid" alt="Stacked books" style="height:500px; width: 100%;">
+            </div>
+        </div>
+    </div>    
+
+<%- include('layouts/scripts'); -%>
+</body>
+</html>
