@@ -17,8 +17,11 @@
   },
   "homepage": "https://github.com/Rockson-devs/BLOGGAS#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.20.0",
     "ejs": "^3.1.8",
     "express": "^4.18.1",
+    "mongoose": "^6.5.5",
     "nodemon": "^2.0.19"
   }
 }
