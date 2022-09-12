@@ -3,6 +3,7 @@ const app = express()
 const ejs = require('ejs')
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
+const fileUpload = require('express-fileupload')
 const aboutController = require('./controllers/aboutController')
 const addABlogController = require('./controllers/add-a-blog-controller')
 const adminController = require('./controllers/adminController')
@@ -21,16 +22,16 @@ app.set('view engine', "ejs")
 app.use(express.static('public'))
 app.use(bodyParser.json()) 
 app.use(bodyParser.urlencoded({ extended: true }))
-
+app.use(fileUpload())
 
 app.get('/', indexController)
 app.get('/about', aboutController)
-app.get('/add-blog', addABlogController.getAddaBlogPage)
-app.post('/add-blog', addABlogController.createBlogPost)
-app.get('/blog', blogController)
+app.get('/add-blog', addABlogController.getAddaBlogPage) //render add-blog page
+app.post('/add-blog', addABlogController.createBlogPost) // send post to the server
+app.get('/blog/:id', blogController) //render a single blog page
 app.get('/contributor', contributorController)
-app.get('/login', loginController.getLoginPage)
-app.post('/login', loginController.loginContributor)
+app.get('/login', loginController.getLoginPage) // render login page
+app.post('/login', loginController.loginContributor) //authenticate and login to the blog
 app.get('/register', registerController.getRegisterPage) //render the page
 app.post('/register', registerController.registerContributor)//send data to the server
 app.get('/admin', adminController)

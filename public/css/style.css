@@ -25,6 +25,11 @@
     transform: translate(-50%, -50%);
     z-index: 6;
 }
-
+/* this shortens long lines with three dots at the end */
+.card-text{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
  
