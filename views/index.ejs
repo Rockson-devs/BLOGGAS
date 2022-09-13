@@ -18,7 +18,7 @@
                 <!-- using ejs to inject data from the server to the index -->
                 <% for (var i = 0; i < allBlogposts.length; i++ ) { %>
                 <div class="card me-2 mb-3" style="width: 18rem;">
-                    <img src='<%= allBlogposts[i].blogImage %>' class="card-img-top" alt="andrew">
+                    <img src='<%= allBlogposts[i].blogImage %>' class="card-img-top" alt="andrew" style="height: 15rem;">
                     <div class="card-body">
                     <h5 class="card-title">
                          <%= allBlogposts[i].blogTitle %>
