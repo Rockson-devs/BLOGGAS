@@ -1,0 +1,34 @@
+<nav class="navbar navbar-light bg-light navbarDown">
+    <div class="container">
+        <div class="me-auto">
+            <a class="navbar-brand" href="#">BLOGGAS</a>
+        </div>
+        <div class="ms-auto">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 flex-row ">
+                <li class="nav-item">
+                    <a class="nav-link text-dark p-2" href="/">HOME</a>
+                </li>
+                <% if(loggedIn) {%>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark p-2" href="/add-blog">WRITE A BLOG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark p-2" href="/logout">LOGOUT</a>
+                    </li>
+                    <% } %>
+                        <% if(!loggedIn) { %>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="/login">LOGIN</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark p-2" href="/register">REGISTER</a>
+                            </li>
+                            <% } %>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark p-2" href="#">CONTACT</a>
+                                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

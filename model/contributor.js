@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
 
 const contributorSchema = new mongoose.Schema({
     surname: {
@@ -18,6 +19,15 @@ const contributorSchema = new mongoose.Schema({
         required: true
     }
 });
+
+contributorSchema.pre('save', function(next){
+    const contributor = this
+
+    bcrypt.hash(contributor.password, 10, (error, hash)=>{
+        contributor.password = hash
+        next()
+    })
+})
 
 const Contributor = mongoose.model('Contributor', contributorSchema )
 
