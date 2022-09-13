@@ -9,8 +9,10 @@ const blogpostSchema = new mongoose.Schema({
     blogDetails: {
         type: String,
         required: true
+
     },
     blogImage: String
+
 });
 
 const Blogpost = mongoose.model('Blogpost', blogpostSchema)

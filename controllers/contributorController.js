@@ -4,5 +4,6 @@ const Blogpost = require('../model/blogpost')
 
 module.exports = async(req,res)=>{
     const allBlogposts = await Blogpost.find({ })  //conditions set in the findOne method must be that it should be authored by that author
+
     res.render('contributor', {allBlogposts: allBlogposts})
 }
