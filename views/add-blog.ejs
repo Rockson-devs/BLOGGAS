@@ -10,7 +10,8 @@
                    <h3 class="contributor-title text-center mb-3">My thoughts for now</h3>
                    <div class="container mb-3 bg-light">
                        <div class="writing-pad">
-                           <form action="" method="POST">
+
+                           <form action="/add-blog" method="POST" enctype="multipart/form-data">
                                <div class="control-group text-center">
                                    <label for="title" class = "d-none">Title</label>
                                    <input type="text" name="blogTitle" id="blogTitle" placeholder="Title" size="60">
@@ -22,6 +23,12 @@
                                 </div>
                                 <br>
                                 <div class="control-group text-center">
+
+                                    <input type="file" name="blogImage" id="blogImage">
+                                </div>
+                                <br>
+                                <div class="control-group text-center">
+
                                 <button type="submit" class="btn btn-primary text-end">Submit</button>
                                 </div>
                         </form>
