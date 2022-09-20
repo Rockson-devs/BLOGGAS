@@ -17,9 +17,11 @@ exports.loginContributor =  async (req, res)=>{
             bcrypt.compare(password, contributor.password, (error, same)=>{
                 if(same){
                     req.session.contributorId = contributor._id
+                    req.session.surname = contributor.surname
+                    req.session.firstname = contributor.firstname
                     console.log(req.session);
                     res.redirect('contributor')
-                    // console.log(`${req.session.contributorId = contributor._id} has logged in`);
+                    console.log(`${req.session.contributorId = contributor._id} has logged in`);
                 } else{
                     res.redirect('/login')
                 }

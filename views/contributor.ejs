@@ -11,16 +11,22 @@
                    <h3 class="contributor-title text-center mb-3">My Blogs</h3>
                    <div class="container mb-3 bg-light">
                         <div class="row d-flex justify-content-between flex-wrap">
-                        <% for (var i=0; i < allBlogposts.length; i++ ) { %>
+                        <% for (var i=0; i < allBlogpostsByContributor.length; i++ ) { %>
                             <div class="card me-2 mb-3" style="width: 18rem;">
-                                <img src="<%= allBlogposts[i].blogImage %>" class="card-img-top" alt="andrew" style="height: 15rem;">
+                                <img src="<%= allBlogpostsByContributor[i].blogImage %>" class="card-img-top" alt="andrew" style="height: 10rem;">
                                 <div class="card-body">
-                                <h5 class="card-title"><%= allBlogposts[i].blogTitle %></h5>
-                                <p class="card-text"><%= allBlogposts[i].blogDetails %></p>
+                                <h5 class="card-title"><%= allBlogpostsByContributor[i].blogTitle %></h5>
+                                <small class="card-subtitle mb-2 text-muted">
+                                    <%= allBlogpostsByContributor[i].contributorID.firstname %>
+                                </small>,
+                                <small class="card-subtitle mb-2 text-muted">
+                                    <%= allBlogpostsByContributor[i].datePosted.toDateString() %>
+                                </small>
+                                <p class="card-text"><%= allBlogpostsByContributor[i].blogDetails %></p>
                                 
-                                <a href="/blog/<%=allBlogposts[i].id %>" class="btn btn-primary">Read more</a>
+                                <a href="/blog/<%=allBlogpostsByContributor[i].id %>" class="btn btn-primary">Read more</a>
                                 <% if(loggedIn) { %>
-                                <a href="/blog/<%=allBlogposts[i].id%>/edit" class=" btn btn-primary">Edit Post</a>
+                                <a href="/blog/<%=allBlogpostsByContributor[i].id%>/edit" class=" btn btn-primary">Edit Post</a>
                                 <% } %>
                                 </div>
                             </div>
