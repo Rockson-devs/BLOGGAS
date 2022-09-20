@@ -15,11 +15,11 @@ exports.createBlogPost = (req,res)=>{
         }
          await  Blogpost.create({
              ... req.body, 
-             blogImage: '/images/' + blogImage.name}),(error, blogpost)=>{
+             blogImage: '/images/' + blogImage.name,
+            contributorID: req.session.contributorId 
+        }),(error, blogpost)=>{
         console.log(error, blogpost);
     }
-        const allBlogposts = await Blogpost.find({}) 
-        res.render('contributor',{                   
-            allBlogposts: allBlogposts})
+        res.redirect('/')
     }) 
 }

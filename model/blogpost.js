@@ -11,6 +11,15 @@ const blogpostSchema = new mongoose.Schema({
         required: true
 
     },
+    contributorID: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Contributor',
+        required: true
+    },
+    datePosted:{
+        type: Date,
+        default:  new Date()
+    },
     blogImage: String
 
 });

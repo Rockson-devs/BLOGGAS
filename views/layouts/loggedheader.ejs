@@ -31,14 +31,21 @@
                                     style="height:70px; width:70px;">
                             </div>
                             <div class="contributor-info col">
-                                <p class="fst-italic text-white"> Rockson Boateng Omane</p>
-                                <p class="fst-italic text-white"> 29th August, 2022</p>
+                                <% if (loggedIn) { %>
+                                    <p class="fst-italic text-white">
+                                        <%=loggedContributorFirstname + " " + loggedContributorSurname%>
+                                    </p>
+                                    <% } %>
+
+                                        <p class="fst-italic text-white"><%= new Date().toDateString()%>  </p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </nav>
-    <%- include('headerNav.ejs'); -%>
+        <%- include('headerNav.ejs'); -%>
     </div>
 </header>
+
+

@@ -18,6 +18,7 @@ const loginController = require('./controllers/loginController')
 const indexController = require('./controllers/indexController')
 const editPostController = require('./controllers/editPostController')
 const logoutController = require('./controllers/logoutController')
+const Contributor = require('./model/contributor')
 
 
 //connection to BLOGGAS DATABASE
@@ -38,9 +39,14 @@ app.use(expressSession({
 global.loggedIn = null
 app.use("*", (req, res, next)=>{
     loggedIn = req.session.contributorId
+    loggedContributorSurname = req.session.surname
+    loggedContributorFirstname= req.session.firstname
+
     next()
 })
 app.use(flash())
+
+
 
 app.get('/', indexController)
 app.get('/about', aboutController)
