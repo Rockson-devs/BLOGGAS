@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('layouts/head'); -%>
+
+    <body class="bg-light">
+        <%- include('layouts/header'); -%>
+
+            <main>
+                <div class="container ImageWithText mb-3">
+                    <img src="/images/thought-catalog-o0Qqw21-0NI-unsplash.jpg" class="img-fluid" alt="Stacked books"
+                        style="height:500px; width: 100%;">
+                    <div id="textOnImage">
+                        <h3>Blogs</h3>
+                        <h2>My first Blog</h2>
+                        <p>August 23, 2022</p>
+                    </div>
+                </div>
+                <div class="container mb-3 bg-light">
+                    <div class="row d-flex justify-content-between flex-wrap">
+                        <!-- using ejs to inject data from the server to the index -->
+                        <% for (var i=0; i < searchedBlogposts.length; i++ ) { %>
+                            <div class="card me-2 mb-3" style="width: 18rem;">
+                                <img src='<%= searchedBlogposts[i].blogImage %>' class="card-img-top" alt="andrew"
+                                    style="height: 10rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        <%= searchedBlogposts[i].blogTitle %>
+                                    </h5>
+                                    <small class="card-subtitle mb-2 text-muted">
+                                        <%= searchedBlogposts[i].contributorID.firstname %>
+                                    </small>,
+                                    <small class="card-subtitle mb-2 text-muted">
+                                        <%= searchedBlogposts[i].datePosted.toDateString() %>
+                                    </small>
+                                    <p class="card-text">
+                                        <%= searchedBlogposts[i].blogDetails %>
+                                    </p>
+                                    <a href="/blog/<%=searchedBlogposts[i].id %>" class="btn btn-primary">Read more</a>
+                                </div>
+                            </div>
+                            <%} %>
+                    </div>
+                </div>
+            </main>
+
+            <%- include('layouts/footer'); -%>
+                <%- include('layouts/scripts'); -%>
+
+    </body>
+
+</html>
