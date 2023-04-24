@@ -23,14 +23,14 @@
                             <a class="nav-link text-white" href="#"><i class="bi bi-pinterest"></i></a>
                         </li>
                     </ul>
-                    <form class="d-flex">
+                    <form class="d-flex" action="/search" method="get">
                         <input class="form-control me-2 rounded-pill" type="search" placeholder="Search"
-                            aria-label="Search">
+                            aria-label="Search" name="search_query">
                         <button class="btn btn-outline-success" type="submit">Search</button>
                     </form>
                 </div>
             </div>
         </nav>
-    <%- include('headerNav.ejs'); -%>
+        <%- include('headerNav.ejs'); -%>
     </div>
 </header>
